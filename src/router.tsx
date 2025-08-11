@@ -1,0 +1,42 @@
+import { createBrowserRouter, Navigate } from 'react-router';
+
+import AuthPage from './pages/auth';
+// import RegisterPage from './pages/register';
+// import DashboardPage from './pages/dashboard';
+// import CreatePlanPage from './pages/create-plan';
+// import PlanIndexPage from './pages/plans/[plan_id]/index';
+// import PlanMapPage from './pages/plans/[plan_id]/map';
+// import PlanSchedulePage from './pages/plans/[plan_id]/schedule';
+// import TaskDetailPage from './pages/tasks/[task_id]';
+// import SettingsPage from './pages/settings';
+// import InsightsPage from './pages/insights';
+
+// import MainLayout from './components/layout/MainLayout';  // 你需要自己做一個 Layout
+
+const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <MainLayout />,
+//     children: [
+//       { index: true, element: <Navigate to="/dashboard" replace /> },
+//       { path: 'dashboard', element: <DashboardPage /> },
+//       { path: 'create-plan', element: <CreatePlanPage /> },
+//       {
+//         path: 'plans/:plan_id',
+//         children: [
+//           { index: true, element: <PlanIndexPage /> },
+//           { path: 'map', element: <PlanMapPage /> },
+//           { path: 'schedule', element: <PlanSchedulePage /> },
+//         ],
+//       },
+//       { path: 'tasks/:task_id', element: <TaskDetailPage /> },
+//       { path: 'settings', element: <SettingsPage /> },
+//       { path: 'insights', element: <InsightsPage /> },
+//     ],
+//   },
+  { path: '/auth', element: <AuthPage /> },
+//   { path: '/register', element: <RegisterPage /> },
+  { path: '*', element: <Navigate to="/auth" replace /> },
+]);
+
+export default router;

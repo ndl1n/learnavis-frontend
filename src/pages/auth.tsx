@@ -15,7 +15,7 @@ import {
   TrendingUp,
   Map
 } from 'lucide-react';
-import type { Errors, FormData } from '../types/authtype.tsx';
+import type { Errors, FormData } from '../types/authtype';
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);

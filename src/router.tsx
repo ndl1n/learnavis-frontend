@@ -6,7 +6,7 @@ import DashboardPage from './pages/dashboard';
 // import PlanIndexPage from './pages/plans/[plan_id]/index';
 // import PlanMapPage from './pages/plans/[plan_id]/map';
 // import PlanSchedulePage from './pages/plans/[plan_id]/schedule';
-// import TaskDetailPage from './pages/tasks/[task_id]';
+import TaskDetailPage from './pages/taskdetail';
 // import SettingsPage from './pages/settings';
 // import InsightsPage from './pages/insights';
 
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
 //           { path: 'schedule', element: <PlanSchedulePage /> },
 //         ],
 //       },
-//       { path: 'tasks/:task_id', element: <TaskDetailPage /> },
+      { path: 'tasks/:task_id', element: <TaskDetailPage /> },
 //       { path: 'settings', element: <SettingsPage /> },
 //       { path: 'insights', element: <InsightsPage /> },
     ],

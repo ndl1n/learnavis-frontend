@@ -6,7 +6,7 @@ interface TaskDetailHeaderProps {
   taskData: TaskData;
   onBack: () => void;
   isEditing: boolean;
-  onToggleEdit: () => void;
+  onToggleEdit: () => void; 
   hasChanges: boolean;
   onSave: () => void;
   isSaving: boolean;

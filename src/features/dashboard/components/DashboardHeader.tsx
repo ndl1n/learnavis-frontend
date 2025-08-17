@@ -12,7 +12,7 @@ export const DashboardHeader = ({ user }: { user: User }) => {
                   <Target className="w-5 h-5 text-white" />
                 </div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                  Career Planner
+                  LearnAvis
                 </h1>
               </div>
             </div>

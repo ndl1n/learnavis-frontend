@@ -5,6 +5,7 @@ import DashboardPage from './pages/dashboard';
 // import CreatePlanPage from './pages/create-plan';
 // import PlanIndexPage from './pages/plans/[plan_id]/index';
 // import PlanMapPage from './pages/plans/[plan_id]/map';
+import SkillMapPage from './pages/skillMap';
 // import PlanSchedulePage from './pages/plans/[plan_id]/schedule';
 import TaskDetailPage from './pages/taskdetail';
 // import SettingsPage from './pages/settings';
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
 //         path: 'plans/:plan_id',
 //         children: [
 //           { index: true, element: <PlanIndexPage /> },
-//           { path: 'map', element: <PlanMapPage /> },
+             { path: 'map', element: <SkillMapPage /> },
 //           { path: 'schedule', element: <PlanSchedulePage /> },
 //         ],
 //       },

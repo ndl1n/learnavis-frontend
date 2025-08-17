@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useTaskDetail } from "../features/taskdetail/hooks/useTaskDetail";
 import { TaskDetailHeader } from "../features/taskdetail/components/TaskDetailHeader";
 import { TaskDetailSidebar } from "../features/taskdetail/components/TaskDetailSidebar";
-import { SaveSuccessNotification } from "../features/taskdetail/components/SaveSuccessNotification";
+import { SaveSuccessNotification } from '../components/ui/SaveSuccessNotification/SaveSuccessNotification';
 import { OverviewTab } from "../features/taskdetail/components/tabs/OverviewTab";
 import { NotesTab } from "../features/taskdetail/components/tabs/NotesTab";
 import { ProgressTab } from "../features/taskdetail/components/tabs/ProgressTab";
@@ -87,7 +87,7 @@ const TaskDetailPage = () => {
         isSaving={isSaving}
       />
 
-      {saveSuccess && <SaveSuccessNotification />}
+      {saveSuccess && <SaveSuccessNotification message="Task saved successfully!" />}
 
       <div className="flex max-w-6xl mx-auto">
         <TaskDetailSidebar

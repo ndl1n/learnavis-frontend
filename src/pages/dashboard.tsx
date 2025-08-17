@@ -1,12 +1,12 @@
-import { useDashboardData } from '../features/dashboard/hooks/useDashboardData';
-import { DashboardHeader } from '../features/dashboard/components/DashboardHeader';
-import { WelcomeHeader } from '../features/dashboard/components/WelcomeHeader';
-import { StatsCards } from '../features/dashboard/components/StatsCards';
-import { NextTaskCard } from '../features/dashboard/components/NextTaskCard';
-import { OverallProgress } from '../features/dashboard/components/OverallProgress';
-import { LearningPlans } from '../features/dashboard/components/LearningPlans';
-import { WeeklyActivity } from '../features/dashboard/components/WeeklyActivity';
-import { QuickActions } from '../features/dashboard/components/QuickActions';
+import { useDashboardData } from '../features/dashBoard/hooks/useDashboardData';
+import { DashboardHeader } from '../features/dashBoard/components/DashboardHeader';
+import { WelcomeHeader } from '../features/dashBoard/components/WelcomeHeader';
+import { StatsCards } from '../features/dashBoard/components/StatsCards';
+import { NextTaskCard } from '../features/dashBoard/components/NextTaskCard';
+import { OverallProgress } from '../features/dashBoard/components/OverallProgress';
+import { LearningPlans } from '../features/dashBoard/components/LearningPlans';
+import { WeeklyActivity } from '../features/dashBoard/components/WeeklyActivity';
+import { QuickActions } from '../features/dashBoard/components/QuickActions';
 
 const DashboardPage = () => {
   const { data, isLoading } = useDashboardData();

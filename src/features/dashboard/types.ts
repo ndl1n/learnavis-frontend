@@ -32,7 +32,7 @@ export interface WeeklyProgress {
 }
 
 // 包含所有儀表板資料的型別
-export interface DashboardData {
+export interface DashBoardData {
     user: User;
     nextTask: NextTask;
     recentPlans: LearningPlan[];

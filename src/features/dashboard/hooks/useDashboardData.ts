@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import type { DashboardData } from '../types';
+import type { DashBoardData } from '../types';
 
 // 未來可以將這裡的 useState 換成 API 請求 (如 SWR, React Query)
-export const useDashboardData = (): { data: DashboardData | null, isLoading: boolean } => {
-  const [data] = useState<DashboardData>({
+export const useDashboardData = (): { data: DashBoardData | null, isLoading: boolean } => {
+  const [data] = useState<DashBoardData>({
     user: {
-      name: "Alex Chen",
+      name: "Andy Lin",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       completedSkills: 12,
       totalSkills: 28,

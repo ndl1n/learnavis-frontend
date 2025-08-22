@@ -1,13 +1,13 @@
 import { createBrowserRouter, Navigate } from 'react-router';
 
 import AuthPage from './pages/auth';
-import DashboardPage from './pages/dashboard';
+import DashboardPage from './pages/dashBoard';
 // import CreatePlanPage from './pages/create-plan';
 // import PlanIndexPage from './pages/plans/[plan_id]/index';
 // import PlanMapPage from './pages/plans/[plan_id]/map';
 import SkillMapPage from './pages/skillMap';
 // import PlanSchedulePage from './pages/plans/[plan_id]/schedule';
-import TaskDetailPage from './pages/taskdetail';
+import TaskDetailPage from './pages/taskDetail';
 // import SettingsPage from './pages/settings';
 // import InsightsPage from './pages/insights';
 

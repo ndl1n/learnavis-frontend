@@ -1,12 +1,12 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useTaskDetail } from "../features/taskdetail/hooks/useTaskDetail";
-import { TaskDetailHeader } from "../features/taskdetail/components/TaskDetailHeader";
-import { TaskDetailSidebar } from "../features/taskdetail/components/TaskDetailSidebar";
+import { useTaskDetail } from "../features/taskDetail/hooks/useTaskDetail";
+import { TaskDetailHeader } from "../features/taskDetail/components/TaskDetailHeader";
+import { TaskDetailSidebar } from "../features/taskDetail/components/TaskDetailSidebar";
 import { SaveSuccessNotification } from '../components/ui/SaveSuccessNotification/SaveSuccessNotification';
-import { OverviewTab } from "../features/taskdetail/components/tabs/OverviewTab";
-import { NotesTab } from "../features/taskdetail/components/tabs/NotesTab";
-import { ProgressTab } from "../features/taskdetail/components/tabs/ProgressTab";
-import { TimerTab } from "../features/taskdetail/components/tabs/TimerTab";
+import { OverviewTab } from "../features/taskDetail/components/tabs/OverviewTab";
+import { NotesTab } from "../features/taskDetail/components/tabs/NotesTab";
+import { ProgressTab } from "../features/taskDetail/components/tabs/ProgressTab";
+import { TimerTab } from "../features/taskDetail/components/tabs/TimerTab";
 
 const TaskDetailPage = () => {
   const { task_id } = useParams<{ task_id: string }>();

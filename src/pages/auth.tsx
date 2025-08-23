@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AuthBranding } from '../features/auth/components/AuthBranding';
 import { LoginForm } from '../features/auth/components/LoginForm';
 import { RegistrationForm } from '../features/auth/components/RegistrationForm';
-import { OAuthButtons } from '../features/auth/components/OAuthButtons';
+// import { OAuthButtons } from '../features/auth/components/OAuthButtons';
 import { useAuthForm } from '../features/auth/hooks/useAuthForm';
 import type { AuthMode } from '../features/auth/types';
 
@@ -33,14 +33,14 @@ const AuthPage = () => {
             </p>
           </div>
           
-          <OAuthButtons isLoading={authForm.isLoading} onLogin={authForm.handleOAuthLogin} />
+          {/* <OAuthButtons isLoading={authForm.isLoading} onLogin={authForm.handleOAuthLogin} /> */}
 
           {/* Divider */}
-          <div className="relative flex items-center my-4">
+          {/* <div className="relative flex items-center my-4">
             <div className="flex-grow border-t border-gray-300"></div>
             <span className="px-4 text-gray-500">or continue with email</span>
             <div className="flex-grow border-t border-gray-300"></div>
-          </div>
+          </div> */}
           
           {/* General Error Message */}
           {authForm.errors.general && (

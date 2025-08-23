@@ -35,6 +35,7 @@ export const useAuthForm = (mode: AuthMode) => {
   const handleInputChange = (field: keyof AuthFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     if (errors[field]) {
+      // 當使用者開始輸入時，清除欄位錯誤和一般錯誤
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
   };
@@ -44,6 +45,8 @@ export const useAuthForm = (mode: AuthMode) => {
     if (!validateForm()) return;
 
     setIsLoading(true);
+    setErrors({}); // 清除先前的錯誤
+    
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
       console.log(mode === 'login' ? 'Login successful with:' : 'Registration successful with:', formData);

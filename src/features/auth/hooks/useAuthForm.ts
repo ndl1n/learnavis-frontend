@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import type { AuthFormData, AuthErrors, AuthMode } from '../types';
+import { loginUser, registerUser } from '../api';
 
 export const useAuthForm = (mode: AuthMode) => {
   const [formData, setFormData] = useState<AuthFormData>({

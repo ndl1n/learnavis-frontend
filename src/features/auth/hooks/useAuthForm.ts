@@ -48,15 +48,44 @@ export const useAuthForm = (mode: AuthMode) => {
     setErrors({}); // 清除先前的錯誤
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log(mode === 'login' ? 'Login successful with:' : 'Registration successful with:', formData);
-      // 成功後導向到 dashboard
+      if (mode === 'login') {
+        const tokenData = await loginUser({
+          email: formData.email,
+          password: formData.password,
+        });
+
+        console.log('Login successful! Token received:', tokenData.access_token);
+
+        // 將 access_token 儲存到 localStorage，這是最常見的做法
+        localStorage.setItem('authToken', tokenData.access_token);
+
+        // 登入成功後跳轉到儀表板頁面
+        alert('Login successful! Redirecting to dashboard...');
+        navigate('/dashboard');
+
+      } else { // 'register' mode
+        const newUser = await registerUser({
+          email: formData.email,
+          password: formData.password,
+          displayName: formData.displayName,
+        });
+        
+        console.log('Registration successful! New user:', newUser);
+        
+        // 註冊成功後，可以自動登入或提示使用者去登入
+        alert(`Welcome, ${newUser.displayName}! Registration successful. Please sign in to continue.`);
+        
         // 這裡可以觸發切換到登入模式的函式，或直接重新載入頁面
         navigate('/auth'); // 假設有一個 /auth 路徑處理登入
       }
     } catch (error) {
-      console.error(error);
-      setErrors(prev => ({ ...prev, general: 'An unexpected error occurred.' }));
+      console.error('Authentication failed:', error);
+      // 將 API 回傳的錯誤訊息設定到 general 錯誤欄位
+      if (error instanceof Error) {
+        setErrors({ general: error.message });
+      } else {
+        setErrors({ general: 'An unexpected error occurred. Please try again.' });
+      }
     } finally {
       setIsLoading(false);
     }

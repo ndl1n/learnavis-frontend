@@ -13,6 +13,7 @@ export const useAuthForm = (mode: AuthMode) => {
   const [errors, setErrors] = useState<AuthErrors>({});
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors: AuthErrors = {};
@@ -47,6 +48,9 @@ export const useAuthForm = (mode: AuthMode) => {
       await new Promise(resolve => setTimeout(resolve, 1500));
       console.log(mode === 'login' ? 'Login successful with:' : 'Registration successful with:', formData);
       // 成功後導向到 dashboard
+        // 這裡可以觸發切換到登入模式的函式，或直接重新載入頁面
+        navigate('/auth'); // 假設有一個 /auth 路徑處理登入
+      }
     } catch (error) {
       console.error(error);
       setErrors(prev => ({ ...prev, general: 'An unexpected error occurred.' }));
